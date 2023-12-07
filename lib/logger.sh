@@ -19,6 +19,11 @@ llib_logger(){
     file)
         echo "[$(date +%T)] [$1] $2" >> $LogPath/$LogName
     ;;
+    stdin)
+        # 管道输入模式
+        # 执行到这里tee就会开始请求标准输入，有输入后就会将内容附加到后面的文件里实现从管道输入读取命令输出
+        tee -a $LogPath/$LogName
+    ;;
     init)
         # 检测并创建log文件夹
         if [[ ! -d $LogPath ]]; then
