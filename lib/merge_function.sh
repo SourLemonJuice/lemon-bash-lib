@@ -9,6 +9,6 @@ llib_merge_function(){
     echo '' >> $1
     echo "# ----merge function $2 to $1 ----" >> $1
     echo '' >> $1
-    # 把 $2 写到 $1 尾巴上，并且删除所有注释
-    grep --invert-match '^[[:blank:]]*#' $2 >> $1
+    # 把 $2 写到 $1 尾巴上
+    $2 >> $1
 }
