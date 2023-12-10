@@ -12,7 +12,7 @@ llib_prompts_need_perm(){
     [[ ! -z $2 ]] && _User=$2
 
     _User_id=$(id -u ${_User})
-    llib_error_exit
+    llib_errored_exit
 
     # 检测权限
     if [[ $_Switch -eq 1 ]];then

@@ -15,7 +15,7 @@ llib_read_config-bash(){
         for i in $Config_Dir_Path1/$Config_Dir_Path2/*;do
             source $i
             # 如果没能加载就退出
-            llib_error_exit
+            llib_errored_exit
         done
     fi
 }
