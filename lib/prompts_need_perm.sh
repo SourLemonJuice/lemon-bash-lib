@@ -1,5 +1,5 @@
 # 检测并提示提示用户需要别的权限
-# 依赖: llib_error_exit
+# 依赖: errored_exit
 # (应用/用户)权限 == Permissions == perm
 # 参数:
 # $1 == Switch( * || 1 )(default on == 1)
