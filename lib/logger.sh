@@ -1,4 +1,16 @@
-# 写日志咯
+# 日志函数-写日志咯
+# options:
+# $1 == mode(default == "[$date] $@" in file)
+# modes: term,file,stdin
+#   > ($xxx is command,'xxx' is string)
+#   > (template in file: "[$date] [mode] $2")
+#   term: same as $echo
+#   file: write into the file
+#   both: term and file,echo and write.if have $3,then write $3 in file,$2 in terminal.
+#   stdin: read stdin input into the file,also echo it.(use $tee)
+# path:
+# final file path is: LogPath/LogName
+# there are in head of function,you can change them or set env
 llib_logger(){
     LogPath=$LogPath
     LogName=$LogName
