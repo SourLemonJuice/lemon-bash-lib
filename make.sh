@@ -2,6 +2,10 @@
 # make is not good at handling script,only script can fight script.(just lazy)
 # sorry,make先輩
 # don't use this script,i was wrong.
+
+echo "this script doesn't work anymore!"
+exit 1
+
 _DIR=./lib
 _OUTPUT=./target
 source $_DIR/merge_function.sh
