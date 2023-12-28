@@ -1,3 +1,4 @@
+# prompts_need_perm v2
 # 检测并提示提示用户需要别的权限
 # 依赖: errored_exit
 # (应用/用户)权限 == Permissions == perm
@@ -18,7 +19,7 @@ llib_prompts_need_perm(){
     if [[ $_Switch -eq 1 ]];then
 
         if [[ ! $(id -u) -eq $_User_id ]];then
-            echo "需要 ${_User} 的权限执行"
+            echo "需要 uid:${_User_id} 的权限执行"
             exit 1
         fi
     fi
