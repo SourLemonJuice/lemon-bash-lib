@@ -1,4 +1,4 @@
-# clipboard v1
+# clipboard v2
 # dependency:
 # - wl-clipboard
 # - xclip
@@ -23,7 +23,7 @@ llib_clipboard_copy() {
 llib_clipboard_paste() {
     case $XDG_SESSION_TYPE in
     wayland)
-        wl-paste "$1"
+        wl-paste
         ;;
     x11)
         echo "只找了wayland模式的工具嘞"
