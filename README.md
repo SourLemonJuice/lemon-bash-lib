@@ -9,27 +9,19 @@
 
 ## 函数列表
 
-```text
-> 2024年 01月 24日 星期三 19:59:30 CST
-clipboard.sh
-errored_exit.sh
-logger.sh
-merge_function.sh
-println_array_items.sh
-prompts_need_perm.sh
-read_config-bash.sh
-remove_script_comment.sh
-script_realpath.sh
-separator.sh
-```
+自己看：[lib/](lib/)
 
 ## 碎碎念
 
 - 这些函数文件开头都会有注释讲解使用方法，不同时期写的注释风格会有些不一样
-- 注释第一行应该是该函数没有`llib_`的名称加版本号
-  
-  ```text
-  # function v2
-  ```
+- （大部分）注释第一行应该是该函数没有`llib_`的名称加版本号
+- （最新的）注释应该由 `lemon-bash-lib | <fileBaseName> | v0` 开头，并且函数名前没有 `llib_`
 
-  这里的版本号在每次更新文件后都可能会改动，并不会统一更改
+```bash
+# lemon-bash-lib | <fileBaseName> | v0
+function FunctionName {
+    return
+}
+```
+
+每个文件的版本号在每次更新文件后都会单独改动，不会统一更改
