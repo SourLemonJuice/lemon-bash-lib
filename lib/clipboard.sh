@@ -1,9 +1,9 @@
-# clipboard v2
+# lemon-bash-lib | clipboard | v3
 # dependency:
 # - wl-clipboard
 # - xclip
 
-llib_clipboard_copy() {
+clipboard_copy() {
     # 检测正在使用的桌面gui程序，并选择对应的剪贴板工具
     case $XDG_SESSION_TYPE in
     wayland)
@@ -12,21 +12,21 @@ llib_clipboard_copy() {
         ;;
     x11)
         # 那这个就是老古董x11的喽
-        # xclip 的实现
-        echo "$1" | xclip -selection c
-        # xsel 的实现
+        # 使用 xclip
+        echo "$1" | xclip -selection clipboard -in
+        # 使用 xsel
         # echo "$Parsed_Code" | xsel -ib
         ;;
     esac
 }
 
-llib_clipboard_paste() {
+clipboard_paste() {
     case $XDG_SESSION_TYPE in
     wayland)
         wl-paste
         ;;
     x11)
-        echo "只找了wayland模式的工具嘞"
+        xclip -selection clipboard -out
         ;;
     esac
 }
