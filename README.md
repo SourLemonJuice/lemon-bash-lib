@@ -25,3 +25,7 @@ function FunctionName {
 ```
 
 每个文件的版本号在每次更新文件后都会单独改动，不会统一更改
+
+## License
+
+Published under MIT license
